@@ -19,6 +19,9 @@ public class MyController {
         model.addAttribute("message", "Hello, Thymeleaf!");
         return "hello"; // Refers to hello.html template
     }
-
+    @GetMapping("/hello2")
+    public ResponseEntity<String> hello2(){
+        return new ResponseEntity<>("Hello from bridgelabz", HttpStatus.OK);
+    }
 
 }
